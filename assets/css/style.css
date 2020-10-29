@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    font-size: 158%;
+    background-color: #677CEF;
+    color: white;
+    margin-bottom: 3%;
+    width: 100%;
+}
+
+
+/*SLIDER*/
+
+#slider {
+    width: 80%;
+    height: 500px;
+    position: relative;
+    border-radius: 1%;
+    margin-left: 10%;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: 50%;
+    opacity: 0;
+}
+
+.slide_active {
+    opacity: 1;
+}
+
+.slide_1 {
+    background-image: url('../img/image1.jpg');
+}
+
+.slide_2 {
+    background-image: url('../img/image2.jpg');
+}
+
+.slide_3 {
+    background-image: url('../img/image3.jpg');
+}
+
+.slide_4 {
+    background-image: url('../img/image4.jpg');
+}
+
+.slide_5 {
+    background-image: url('../img/image5.jpg');
+}
+
+.bttn {
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    z-index: 2;
+}
+
+.bttn_right {
+    background-image: url('../img/next.png');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bttn_left {
+    background: url('../img/back.png');
+    width: 100px;
+    height: 100px;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: cover;
+}
+
+.bttn_pause {
+    background: url('../img/pause.png');
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: cover;
+}
+
+.pausing {
+    background: url('../img/play.png');
+}
+
+.slider_nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.slider_indicator {
+    position: absolute;
+    display: flex;
+    margin-top: 20px;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+
+.slider_indicator div {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    margin: 0 3px;
+    font-size: 0;
+}
+
+.slider_indicator div.slide_active {
+    background-color: rgba(0, 0, 0, .75);
+}
